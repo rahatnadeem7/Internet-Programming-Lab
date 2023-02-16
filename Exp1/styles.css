@@ -1,0 +1,37 @@
+body {
+    background-color: rgb(202, 202, 202);
+  }
+
+  p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: black;
+  }
+
+  h1 {
+    color: navy;
+   
+  }
+
+  h2 {
+    color: navy;
+   
+  }
+
+  
+
+  nav {
+    display:flex;
+    justify-content: space-between;
+   
+    align-items: center;
+    margin: 10px;
+    width: 35%;
+   
+  }
+
+  h1:hover{
+    text-decoration: underline;
+  }
+  
+    
