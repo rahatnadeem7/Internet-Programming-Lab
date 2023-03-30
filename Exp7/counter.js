@@ -21,5 +21,5 @@ decrementButton.addEventListener('click', () => {
 
 // Function to update the count element with the current quantity
 function updateCount() {
-  countElement.textContent = quantity;
+  countElement.innerHTML = quantity;
 }
