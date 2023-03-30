@@ -1,19 +1,25 @@
-const counter = document.querySelector('.counter');
-const count = counter.querySelector('.count');
-const incrementBtn = counter.querySelector('.increment');
-const decrementBtn = counter.querySelector('.decrement');
+// Get the HTML elements for the increment and decrement buttons
+const incrementButton = document.querySelector('.increment');
+const decrementButton = document.querySelector('.decrement');
+const countElement = document.querySelector('.count');
 
-let currentCount = 1;
-count.textContent = currentCount;
+// Set the initial quantity to 1
+let quantity = 1;
 
-incrementBtn.addEventListener('click', () => {
-  currentCount++;
-  count.textContent = currentCount;
+// Add event listeners to the buttons
+incrementButton.addEventListener('click', () => {
+  quantity++;
+  updateCount();
 });
 
-decrementBtn.addEventListener('click', () => {
-  if (currentCount > 1) {
-    currentCount--;
-    count.textContent = currentCount;
+decrementButton.addEventListener('click', () => {
+  if (quantity > 1) {
+    quantity--;
+    updateCount();
   }
 });
+
+// Function to update the count element with the current quantity
+function updateCount() {
+  countElement.textContent = quantity;
+}
