@@ -4,34 +4,45 @@
     </head>
     <body>
         <link rel="stylesheet" type="text/css" href="styles.css">
+        <script>
+            function validateForm() {
+                var username = document.forms["loginForm"]["username"].value;
+                var password = document.forms["loginForm"]["password"].value;
+                if (username == "" || password == "") {
+                    alert("Username and password are required!");
+                    return false;
+                }
+            }
+        </script>
         <strong><h1>Country Maps</h1></strong>
-        <table align="center" border="0" cellpadding ="12">
-            <tr>
-                
-                <td><b><label for="name">User Name</b></td></label>
-                <td><input type="text"></td>
-            </tr>
 
-            <tr>
-                <td><b><label for="name"> Password</b></td></label>
-                <td><input type="text"></td>
-            </tr>
-        
-            
-            <td>
-                <form method="get" action="exp3.html">
-                <input type="submit" value="Submit">
-            </form>
-
-
-            <form method="post" action="Hi">
-                <input type="submit" value="Register">
-            </form></td>
-            
-
-            
-
-        </table>
-            
+        <form  name="loginForm" method="get" action="exp3.html" onsubmit="return validateForm()">
+            <table align="center" border="0" cellpadding="12">
+                <tr>
+                    <td>
+                        <label for="username"><b>User Name</b></label>
+                    </td>
+                    <td>
+                        <input type="text" id="username" name="username">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password"><b>Password</b></label>
+                    </td>
+                    <td>
+                        <input type="password" id="password" name="password">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit" name="submit">Submit</button>
+                    </td>
+                    <td>
+                        <button type="submit" name="register">Register</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
     </body>
 </html>
